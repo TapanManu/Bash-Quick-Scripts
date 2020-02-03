@@ -1,0 +1,48 @@
+mv {file1} {file2}
+#cut/move file or directory from file1 to file2
+cp {file1} {file2}
+#copy contents from file1 to file2
+man {command}
+#describes the directory of given command
+pwd
+#present working directory
+ls
+#list all contents of directory
+ls -a
+#list all contents of given directory
+ls a*
+#list all files starting with a
+ls a.*
+#list all files named a with extension .cpp,.py or anything else
+ls *.py
+#list all files with .py extension
+date
+#to see date
+who
+#to see who is using the system
+whoami
+#to see currently logged in user
+mkdir {dirname}
+#make a new directory
+cd {dirname}
+# change to that directory
+vi {filename}
+# create a file using vi editor in linux
+gedit {filename}
+#create a file using gedit editor in linux
+cat {filename}
+# to display text files
+pr {filename}
+#print file
+rm {filename}
+#remove a file
+rmdir {dirname}
+#remove empty directory
+rm -r{dirname}
+#remove directory
+rm -rf {dirname}
+#remove all files in a given directory
+diff {file1}{file2}
+#to see difference btw two files
+more {filename}
+#to display file one full screen at a time
