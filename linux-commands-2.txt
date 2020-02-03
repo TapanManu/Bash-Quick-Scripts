@@ -1,0 +1,174 @@
+REDIRECTING
+#output linux commands result to file
+linux command > filename
+#output linux commands result to end of file
+linux command >> filename
+#take input to linux command from file rather than from keyboard
+linux command<filename
+
+FILE ACCESS restrictions
+touch file.txt
+#create file
+ls -l
+#display permissions associated with file 
+chmod o+x file.txt
+#change file permission for file.txt to executable to others
+chmod ug+w file.txt
+#change file permissions of users,group writeable 
+chmod u-w file.txt
+#remove permissions of user to write file.txt
+chmod ugo-x temp
+# remove executable(cd) permisssions of directory temp
+chmod ugo-w temp
+#remove write(creation) permissions of directory temp
+chmod ugo-r temp
+#remove read(ls) permissions of directory temp
+chmod 011 file.txt
+#executable permissions to group and others
+chmod 447 file.txt
+#read to users,groups and read,write,execute to others
+sudo chmod 447 file.txt
+#change mode of files to files which we do not have permissions.
+sudo chmod 777 -R /dir
+#apply changes to all files in the given directory
+sudo chown tux filename
+#change owner of filename
+
+
+FILE PERMISSIONS AND OWNERSHIP
+#To create a new group on the system
+groupadd {group name}
+$ groupadd mygroup
+#To show which groups you are in
+groups
+$ groups
+#To check the file permissions
+ls -l
+$ ls -l
+#To add write permission to all users
+chmod a+w file name
+$ chmod a+w myfile
+#To add rad permission to only the usersIn your group
+chmod g+r file name
+$ chmod g+r myfile
+#To make a file executable and runnableBy any user
+chmod a+x file name
+$ chmod a+x myfile 
+#To remove specific permission 
+chmod {u|g|o|a} -{r|w|x} {file name}
+#To add and remove permissions in a
+Single step
+chmod u+x, g+r, o-rwx {filename}
+
+cat myfile.txt|tr 'a-z' 'bcdefghijklmnopqrstuvwxyza'
+#translates a-z into 'bcd...a'(encrypting) file and displaying
+
+FILTER
+To see no of characters in a file
+wc –c {file name}
+$ wc –c  
+To see no of words in a file
+wc –w {file name}
+$ wc –w
+To see no of lines in a file
+wc –l {file name}
+$ wc –l
+To   see   no   of   lines   ,   words, 
+charact
+ers
+at a time
+w
+c {file name}
+$ wc myfile
+To see the top 10 lines of a file
+head {file name}
+$ head myfile
+To see the top 5 lines of a file
+head -5 {file name}
+$ head -5 myfile
+To see the last 10 lines of a file
+tail {file name}
+$ tail myfile
+To see the last 20 lines of a file
+tail -20 {file name}
+$ tail -20 myfile
+grep command
+To  search  a  pattern  of  word  in  a file
+grep {word }{filename }
+$ grep hi myfile
+To search multiple words in a file
+grep –E  'word1|word2‘  {f name}
+$    grep –E  hi|no|‘myfile
+To show all the lines that do not 
+match the searched string
+grep –v {word} {file name}
+$ grep –v hi myfile
+To display only the count of matching lines
+grep –c {word} {file name}
+$ grep –c my myfile
+To show the matching line and its number
+grep –n {word} {file name}
+$ grep –n apple myfile
+To  match  both  upper  and  lower case
+grep –i {word} {file name}
+$ grep –i my myfile
+sort command
+To sort out the content of the file alphabetically
+sort {file name}
+$ sort myfile
+Reverse sorting
+sort –r {file name}
+$ sort –r myfile
+Sort numerically
+sort –n {file name}
+$ sort –n myfile
+Case sensitive sorting
+sort –f {file name}
+$ sort –f myfile
+tr command
+To translate all occurrences of one Character to another
+tr {character1} {character2}
+$ tr 'e' 'E'
+To set all letters to uppercase
+tr {range1} {range2}
+$ tr 'a-z' 'A-Z'
+To translate all new lines to space
+Example: 
+$ tr  '\n'  ''
+
+uniq command
+To remove duplicates from a sorted list
+$ sort {file name} |uniq
+To  the  occurrences  of  a  word  in  a file
+$ sort {file name} | uniq -c
+
+PIPE
+Output of 
+ls command is given as input to moreCommand so that output is printed one screen Full page at a time.
+$ ls |more
+Output of whocommand is given as input to sort command so that it will print sorted list ofusers. 
+
+$ who | sort
+Output of who command is given as input to wc command so that it will number of users who logon to system.
+$ 
+who |wc -l
+Output of ls command is given as input to wc Command so that it will print number  of files In current directory.
+
+$ ls –l | wc -l
+
+JOB CONTROL
+To list all current running processes their corresponding pid and their status
+$ps
+To provide a list of running process in a treestructure
+pstree -p
+To stop any process i.e, to kill process
+kill {pid}
+$ kill 10
+12
+To stop all process except your shell
+kill 0
+$ kill 0
+To list all jobs presently running on your systemjobs
+$ jobs
+For background processing Linux command &
+$ ls / -r | wc –l &
