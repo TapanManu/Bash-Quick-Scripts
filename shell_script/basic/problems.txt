@@ -1,0 +1,18 @@
+SHELL SCRIPTING – PROGRAMS
+
+1. Write a shell script program to display the name of the current working directory and date.
+2. Write a shell script program to perform arithmetic operation on two numbers.
+3. Write a shell script program to pass arguments to the program and display the count of arguments and content.
+4. Write a shell script program to test whether 3 arguments are being passed to it.
+5. Write a shell script program to check whether two strings sent as command line arguments are same or not using test command.
+6. a) Let argument be a filename. Write a shell script program to check whether the file exist or not.
+b) Modify the above program to rename a filename with another name passed as argument, Also check number of parameters being passed.
+7. Write a shell script program to test whether a string is present in a file or not.
+8. Write a shell script program to copy content of file1 to file 2. If file2 exists then append the content of file1 to its original content.
+9. Write a shell script program that take first 10 lines from first file and rest  10 lines from second file and move them in a third file. The filename will be sent as command line arguments.
+10. Write a shell script program to show number of files in the current directory beginning with a specified character.
+11. Write a shell script program to read a line from a file and store them into another file after converting all the vowels from first file into uppercase.
+12. Write a shell script program that accept the name of the user and prints the entire name in reverse and also print the length of the entire name
+13. Consider a file school.dat with the following fields: roll no, name and marks. Write a shell script program to sort the file in descending order of marks
+14. Write a shell script program to display sum of first n numbers
+15. Menu driven program to display the day when inputting 1 to 7
