@@ -1,0 +1,27 @@
+(1) Logged user and his logname
+
+echo $USER
+or
+whoami
+or
+id -u -n
+
+(2)  Your current shell
+ echo $SHELL
+
+(3) Your home directory
+echo $HOME
+
+(4) Your operating system type
+x=$OSTYPE
+echo ”Your operating system type : $x”
+
+(5) Your current path setting
+echo $PATH
+
+(6) Your current working directory
+echo $PWD
+
+(7) Show currently logged number of users
+who --count
+who | wc -l
