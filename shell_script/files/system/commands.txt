@@ -1,0 +1,22 @@
+(1) About your OS and version, release number, kernel version
+	uname -r
+
+(2) Show all available shells
+cat /etc/shells
+
+(3) Show mouse settings
+echo $(xinput - -list - -short)
+
+(4) Show computer CPU information like processor type, speed etc
+echo $(sudo dmidecode -t 
+Or
+echo $(​lscpu​)
+
+(5) Show memory information
+echo $(free -m)
+
+(6) Show hard disk information like size of hard-disk, cache memory, model etc.
+echo $(sudo dmidecode -t memory)
+
+(7) File system (Mounted)
+echo $(sudo fdisk -l)
